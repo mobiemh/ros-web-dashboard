@@ -1,0 +1,21 @@
+{
+  "name": "ros-web-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ROS 연동 실시간 웹 대시보드 (React + Vite + roslibjs)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "roslib": "^1.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

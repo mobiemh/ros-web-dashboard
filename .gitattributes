@@ -1,0 +1,5 @@
+# 줄바꿈 정규화 — 셸 스크립트는 반드시 LF (Linux/WSL 에서 CRLF 면 깨짐)
+* text=auto
+*.sh   text eol=lf
+*.py   text eol=lf
+*.mjs  text eol=lf

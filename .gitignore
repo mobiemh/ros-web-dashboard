@@ -1,0 +1,31 @@
+# 의존성 — npm install 로 재생성되므로 커밋하지 않음 (폴더 크기의 대부분)
+node_modules/
+
+# 빌드 산출물
+dist/
+dist-ssr/
+*.local
+
+# Vite 캐시
+.vite/
+
+# Python 로컬 캐시 (백엔드는 Docker 에서 실행되지만 대비)
+__pycache__/
+*.py[cod]
+
+# 로그
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 환경변수
+.env
+.env.local
+.env.*.local

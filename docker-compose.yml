@@ -1,0 +1,28 @@
+# 두 가지 모드를 profile 로 제공 (아키텍처 트레이드오프 시연)
+#
+#  단순 모드   : 브라우저 ↔ rosbridge 직결
+#      docker compose --profile direct up --build      (:9090)
+#
+#  플랫폼 모드 : 브라우저 ↔ FastAPI+rclpy 백엔드 ↔ ROS   ← 풀스택 운영 시스템
+#      docker compose --profile platform up --build    (:8000)
+
+services:
+  # 단순 모드: rosbridge + fake_robot (브라우저가 roslib 로 직접 접속)
+  rosbridge:
+    build: ./docker
+    container_name: ros-dashboard-rosbridge
+    profiles: ["direct"]
+    ports:
+      - "9090:9090"
+    environment:
+      - ROS_DOMAIN_ID=0
+
+  # 플랫폼 모드: 백엔드 브릿지 + fake_robot (브라우저가 백엔드에 접속)
+  backend:
+    build: ./backend
+    container_name: ros-dashboard-backend
+    profiles: ["platform"]
+    ports:
+      - "8000:8000"   # REST + WebSocket(/ws)
+    environment:
+      - ROS_DOMAIN_ID=0

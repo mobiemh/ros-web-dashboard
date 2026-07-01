@@ -1,0 +1,196 @@
+:root {
+  --bg: #0b0f17;
+  --panel: #111827;
+  --panel-2: #0f1623;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+.conn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.demo-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.url {
+  width: 220px;
+  padding: 6px 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+}
+.url:disabled {
+  opacity: 0.4;
+}
+.conn button {
+  padding: 6px 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: #06121c;
+  font-weight: 600;
+  cursor: pointer;
+}
+.conn button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.status {
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: capitalize;
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.card-title {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.stat {
+  padding: 14px 16px;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.stat-value .unit {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  background: var(--panel-2);
+  border-radius: 8px;
+}
+
+/* Teleop */
+.teleop .pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.pad-row {
+  display: flex;
+  gap: 8px;
+}
+.teleop button {
+  width: 56px;
+  height: 48px;
+  font-size: 18px;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.teleop button:hover {
+  border-color: var(--accent);
+}
+.teleop button.stop {
+  color: #f43f5e;
+}
+
+/* Hint */
+.hint ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.9;
+  font-size: 14px;
+  color: var(--muted);
+}
+.hint code {
+  background: var(--panel-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--accent);
+}
