@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "description": "ROS 연동 실시간 웹 대시보드 (React + Vite + roslibjs)",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
