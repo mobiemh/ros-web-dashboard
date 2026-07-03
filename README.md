@@ -1,7 +1,7 @@
 # ROS Web Dashboard
 
 ROS(로봇)의 실시간 데이터를 브라우저에서 **모니터링**하고 **원격 제어(Teleop)** 하는 웹 대시보드.
-가상 로봇(Gazebo)의 **카메라 영상은 WebRTC**로, 위치·라이다·조종은 **rosbridge**로 연결한다.
+가상 로봇(Gazebo)의 **카메라 영상은 WebRTC**로, 위치·라이다·조종은 **rosbridge**로 연결한다.("Node 18+ / Docker Desktop 필요") 
 
 ![카메라 WebRTC 데모](docs/camera-webrtc-demo.gif)
 
