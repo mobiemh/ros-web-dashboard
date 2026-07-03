@@ -97,6 +97,11 @@ docker-compose.camera.yml
 
 ## 확장 아이디어
 
+- 백엔드에서 데이터 취합 정리
+- 시뮬레이션이 현실의 진짜 모터와 달라서 실제로는 변수가 많음 (동역학이 없음)
+- webRTC udp 실제 동작이 확인되지 않음(turn/sturn 서버 구성). 지금은 로컬에서의 도커 구성
+
+- 아래는 ai 작성
 - 다중 로봇: 네임스페이스(`/robot1/odom`)별 위젯
 - `/scan` LaserScan 시각화(장애물), 웹 3D 뷰(three.js)
 - 목적지 클릭 → Nav2 goal 전송(액션 통신)
